@@ -23,12 +23,30 @@ body {
   padding-right: 0.5em;
 }
 button {
-  font-size: 1 em;
+  font-size: 1.25em;
   flex-basis: 25%;
+  height: 25%;
+  background-color: #d8d9db;
+}
+button:hover {
+  background-color: #ebebeb;
+}
+button:active {
+  background-color: #bbbcbe;
 }
 .clear {
   flex-basis: 50%;
 }
 .zeroKey {
   flex-basis: 75%;
+}
+.function {
+  background-color: #df974c;
+  color: #fff;
+}
+.function:hover {
+  background-color: #dfb07e;
+}
+.function:active {
+  background-color: #dd8d37;
 }
