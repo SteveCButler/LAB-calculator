@@ -24,7 +24,7 @@ body {
 }
 button {
   font-size: 1.25em;
-  flex-basis: 25%;
+  width: 25%;
   height: 25%;
   background-color: #d8d9db;
 }
@@ -35,18 +35,18 @@ button:active {
   background-color: #bbbcbe;
 }
 .clear {
-  flex-basis: 50%;
+  width: 50%;
 }
 .zeroKey {
-  flex-basis: 75%;
+  width: 75%;
 }
-.function {
+.functionButton {
   background-color: #df974c;
   color: #fff;
 }
-.function:hover {
+.functionButton:hover {
   background-color: #dfb07e;
 }
-.function:active {
+.functionButton:active {
   background-color: #dd8d37;
 }
