@@ -1,19 +1,40 @@
 //declare variables
-let numBtns = document.querySelectorAll(".numButton");
+let zeroBtn = document.querySelector("#zero");
+let oneBtn = document.querySelector("#one");
+let twoBtn = document.querySelector("#two");
+let threeBtn = document.querySelector("#three");
+let fourBtn = document.querySelector("#four");
+let fiveBtn = document.querySelector("#five");
+let sixBtn = document.querySelector("#six");
+let sevenBtn = document.querySelector("#seven");
+let eightBtn = document.querySelector("#eight");
+let nineBtn = document.querySelector("#nine");
 let fnBtns = document.querySelectorAll(".functionButton");
 let clrBtn = document.querySelector(".clear");
+let backBtn = document.querySelector(".backButton");
 let eqaulBtn = document.querySelector(".equalButton");
+let numBtns = document.querySelectorAll(".numButton");
+numbers = [];
 
 //Clear results window
 clrBtn.addEventListener("click", () => {
   resultsOut(0);
 });
 
+backBtn.addEventListener("click", () => {
+  numbers.pop();
+  let allNumbers = Number(numbers.join(""));
+  resultsOut(allNumbers);
+});
+
 //Access number buttons and update result window
 numBtns.forEach((btn) => {
   btn.addEventListener("click", (event) => {
     numValue = event.target.innerHTML;
-    resultsOut(numValue);
+    numbers.push(numValue);
+    console.log(numbers);
+    let allNumbers = Number(numbers.join(""));
+    resultsOut(allNumbers);
   });
 });
 
