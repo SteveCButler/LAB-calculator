@@ -14,17 +14,18 @@ let clrBtn = document.querySelector(".clear");
 let backBtn = document.querySelector(".backButton");
 let eqaulBtn = document.querySelector(".equalButton");
 let numBtns = document.querySelectorAll(".numButton");
-numbers = [];
+let numbers = [];
 
 //Clear results window
 clrBtn.addEventListener("click", () => {
+  numbers = [];
   resultsOut(0);
 });
 
 backBtn.addEventListener("click", () => {
   numbers.pop();
-  let allNumbers = Number(numbers.join(""));
-  resultsOut(allNumbers);
+  // let allNumbers = Number(numbers.join(""));
+  resultsOut(Number(numbers.join("")));
 });
 
 //Access number buttons and update result window
@@ -32,9 +33,9 @@ numBtns.forEach((btn) => {
   btn.addEventListener("click", (event) => {
     numValue = event.target.innerHTML;
     numbers.push(numValue);
-    console.log(numbers);
-    let allNumbers = Number(numbers.join(""));
-    resultsOut(allNumbers);
+    //console.log(numbers);
+    // let allNumbers = Number(numbers.join(""));
+    resultsOut(Number(numbers.join("")));
   });
 });
 
